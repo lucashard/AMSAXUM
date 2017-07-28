@@ -1,0 +1,49 @@
+﻿@using System.Web.UI.WebControls
+@model DashBoard.ViewModel.DataContractRenewalsVm  
+@{
+    var grid = new WebGrid(Model.List, canPage: true, rowsPerPage: 10);
+}
+
+@using (Html.BeginForm("ViewGridData", "ContractRenewals", FormMethod.Get))
+{
+    <h1>Search ...</h1>
+    <div class="form-horizontal">
+
+        <div class="col-lg-2">
+            @Html.TextBoxFor(m => m.Business, new { @class = "form-control", @placeholder = "Business" })
+        </div>
+
+        <button type="submit" class="btn btn-success">
+            <span class="glyphicon glyphicon-search"></span>
+        </button>
+
+    </div>
+    
+    @grid.GetHtml("webgrid-table    ", "webgrid-header",
+        rowStyle: "webgrid-row-style",
+        alternatingRowStyle: "webgrid-alternating-row",
+        selectedRowStyle: "webgrid-selected-row",
+        footerStyle: "webgrid-footer", columns: new[]
+        {
+            grid.Column("Business", "Business"),
+            grid.Column("Column1", "Column1"),
+            grid.Column("Column2", "Column2"),
+            grid.Column("Column3", "Column3"),
+            grid.Column("Column4","Column4"),
+            grid.Column("Column5","Column5"),
+            grid.Column("Column6", "Column6"),
+            grid.Column("Column7", "Column7"),
+            grid.Column("Column8", "Column8"),
+            grid.Column("Column9", "Column9"),
+            grid.Column("Column10", "Column10"),
+            grid.Column("Column11", "Column11"),
+            grid.Column("Column12", "Column12")
+        })
+
+    
+    <span >
+@Html.ActionLink("Go Back", "Index", "Forecast", new { @class = "btn btn-success" })
+</span>
+
+    <div style="height: 50px;"></div>
+}

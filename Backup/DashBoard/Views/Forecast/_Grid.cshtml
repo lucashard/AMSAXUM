@@ -1,0 +1,64 @@
+﻿@using System.Web.UI.WebControls
+@model DashBoard.ViewModel.Forecastvm
+@{
+    var grid = new WebGrid(Model.ForecastView, canPage: true, rowsPerPage: 10);
+}
+
+@using (Html.BeginForm("ViewGrid", "Forecast", FormMethod.Get))
+{
+    <h1>Search ...</h1>
+    <div class="form-horizontal">
+
+        <div class="col-lg-2">
+            @Html.TextBoxFor(m => m.ClientName, new {@class = "form-control", @placeholder = "Client Name"})
+        </div>
+
+        <button type="submit" class="btn btn-success">
+            <span class="glyphicon glyphicon-search"></span>
+        </button>
+
+    </div>
+    
+    @grid.GetHtml("webgrid-table", "webgrid-header",
+        rowStyle: "webgrid-row-style",
+        alternatingRowStyle: "webgrid-alternating-row",
+        selectedRowStyle: "webgrid-selected-row",
+        footerStyle: "webgrid-footer", columns: new[]
+        {
+            grid.Column("", format: @<text>
+                                        @Html.ActionLink("Edit Record", "Edit", "Forecast", new {item.Id}, new {@class = "btn btn-info"})
+                                     </text>, style: "col3Width", canSort: false),
+            grid.Column("", format: @<text>
+                                        @Html.ActionLink("Delete Record", "Delete", "Forecast", new {item.Id}, new {@class = "btn btn-info", onclick = "return confirm('Are you sure?');"})
+                                     </text>, style: "col3Width", canSort: false),
+            grid.Column("ClientName", "Client Name"),
+            grid.Column("ClientCategory", "Client Category"),
+            grid.Column("ClientStatus", "Client Status"),
+            grid.Column("City"),
+            grid.Column("Tw"),
+            grid.Column("EstHours", "Est Hours"),
+            grid.Column("FiscalYearEnd", "Fiscal Year End"),
+            grid.Column("FillingMonth", "Filling Month"),
+            grid.Column("YearClaimAmount", "Year Claim Amount"),
+            grid.Column("ExpectedExpenditures", "Expected Expenditures"),
+            grid.Column("FilledExpenditures", "Filled Expenditures"),
+            grid.Column("PotentialExpenditures", "Potential Expenditures"),
+            grid.Column("ReturnRate", "Return Rate"),
+            grid.Column("ContractRate", "Contract Rate"),
+            grid.Column("ExpectedClaimValue", "Expected ClaimValue"),
+            grid.Column("ClaimValue"),
+            grid.Column("PotencialClaimValue", "Potencial ClaimValue"),
+            grid.Column("Employees"),
+            grid.Column("Industry"),
+            grid.Column("Potencial"),
+            grid.Column("Comments")
+        })
+
+    <span class="pull-left">@Html.ActionLink("Create New Record", "Create", "Forecast", new { @class = "btn btn-primary" })
+    </span>
+    <span >
+@Html.ActionLink("Go Back", "Index", "Forecast", new { @class = "btn btn-primary pull-right" })
+</span>
+
+    <div style="height: 50px;"></div>
+}

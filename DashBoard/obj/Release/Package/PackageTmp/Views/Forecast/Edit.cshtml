@@ -1,0 +1,130 @@
+﻿@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model DashBoard.ViewModel.ForecastViewModel
+<h2>Edit Record</h2>
+
+@using (Html.BeginForm("Edit", "Forecast", FormMethod.Post))
+{
+     @Html.ValidationSummary(true)
+     <div style="margin-left: 126px;">
+    <div class="form-group row">
+      <div class="col-xs-4">
+        @Html.LabelFor(m => m.ClientName)
+        @Html.TextBoxFor(m => m.ClientName, new { @class = "form-control" })
+        
+      </div>
+      <div class="col-xs-4">
+            @Html.LabelFor(m => m.ClientCategory)
+        @Html.TextBoxFor(m => m.ClientCategory, new { @class = "form-control" })
+      </div>
+    <div class="col-xs-4">
+            @Html.LabelFor(m => m.ClientStatus)
+        @Html.TextBoxFor(m => m.ClientStatus, new { @class = "form-control" })
+      </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-xs-4">
+            @Html.LabelFor(m => m.City)
+            @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+        </div>
+        <div class="col-xs-4">
+            @Html.LabelFor(m => m.ClientStatus)
+            @Html.TextBoxFor(m => m.ClientStatus, new { @class = "form-control" })
+        </div>
+        <div class="col-xs-4">
+            @Html.LabelFor(m => m.AccountManager)
+            @Html.TextBoxFor(m => m.AccountManager, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-xs-4">
+            @Html.LabelFor(m => m.Tw)
+            @Html.TextBoxFor(m => m.Tw, new { @class = "form-control" })
+        </div>
+        <div class="col-xs-4">
+            @Html.LabelFor(m => m.EstHours)
+            @Html.TextBoxFor(m => m.EstHours, new { @class = "form-control" })
+        </div>
+        <div class="col-xs-4">
+            @Html.LabelFor(m => m.FiscalYearEnd)
+            @Html.TextBoxFor(m => m.FiscalYearEnd, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-xs-4">
+            @Html.LabelFor(m => m.FillingMonth)
+            @Html.TextBoxFor(m => m.FillingMonth, new { @class = "form-control" })
+        </div>
+        <div class="col-xs-4">
+            @Html.LabelFor(m => m.YearClaimAmount)
+            @Html.TextBoxFor(m => m.YearClaimAmount, new { @class = "form-control" })
+        </div>
+        <div class="col-xs-4">
+            @Html.LabelFor(m => m.ExpectedExpenditures)
+            @Html.TextBoxFor(m => m.ExpectedExpenditures, new { @class = "form-control" })
+        </div>
+    </div>
+
+        <div class="form-group row">
+            <div class="col-xs-4">
+                @Html.LabelFor(m => m.FilledExpenditures)
+                @Html.TextBoxFor(m => m.FilledExpenditures, new { @class = "form-control" })
+            </div>
+            <div class="col-xs-4">
+                @Html.LabelFor(m => m.PotentialExpenditures)
+                @Html.TextBoxFor(m => m.PotentialExpenditures, new { @class = "form-control" })
+            </div>
+            <div class="col-xs-4">
+                @Html.LabelFor(m => m.ReturnRate)
+                @Html.TextBoxFor(m => m.ReturnRate, new { @class = "form-control" })
+            </div>
+        </div>
+
+    <div class="form-group row">
+        <div class="col-xs-4">
+            @Html.LabelFor(m => m.ContractRate)
+            @Html.TextBoxFor(m => m.ContractRate, new { @class = "form-control" })
+        </div>
+        <div class="col-xs-4">
+            @Html.LabelFor(m => m.ExpectedClaimValue)
+            @Html.TextBoxFor(m => m.ExpectedClaimValue, new { @class = "form-control" })
+        </div>
+        <div class="col-xs-4">
+            @Html.LabelFor(m => m.ClaimValue)
+            @Html.TextBoxFor(m => m.ClaimValue, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-xs-4">
+            @Html.LabelFor(m => m.PotencialClaimValue)
+            @Html.TextBoxFor(m => m.PotencialClaimValue, new { @class = "form-control" })
+        </div>
+        <div class="col-xs-4">
+            @Html.LabelFor(m => m.Employees)
+            @Html.TextBoxFor(m => m.Employees, new { @class = "form-control" })
+        </div>
+        <div class="col-xs-4">
+            @Html.LabelFor(m => m.Industry)
+            @Html.TextBoxFor(m => m.Industry, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group row">
+      
+        <div class="col-xs-4">
+            @Html.LabelFor(m => m.Comments)
+            @Html.TextBoxFor(m => m.Comments, new { @class = "form-control" })
+        </div>
+
+    </div>
+
+
+    </div>
+  <input type="submit" id="Submit" value="Save" class="btn btn-info" />
+}

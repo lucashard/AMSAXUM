@@ -1,0 +1,10 @@
+C:\Users\Lucas\Documents\Visual Studio 2010\Projects\DashBoard\Modelo\bin\Release\Modelo.dll.config
+C:\Users\Lucas\Documents\Visual Studio 2010\Projects\DashBoard\Modelo\bin\Release\Modelo.dll
+C:\Users\Lucas\Documents\Visual Studio 2010\Projects\DashBoard\Modelo\bin\Release\Modelo.pdb
+C:\Users\Lucas\Documents\Visual Studio 2010\Projects\DashBoard\Modelo\bin\Release\EntityFramework.dll
+C:\Users\Lucas\Documents\Visual Studio 2010\Projects\DashBoard\Modelo\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Lucas\Documents\Visual Studio 2010\Projects\DashBoard\Modelo\bin\Release\EntityFramework.xml
+C:\Users\Lucas\Documents\Visual Studio 2010\Projects\DashBoard\Modelo\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Lucas\Documents\Visual Studio 2010\Projects\DashBoard\Modelo\obj\Release\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Documents\Visual Studio 2010\Projects\DashBoard\Modelo\obj\Release\Modelo.dll
+C:\Users\Lucas\Documents\Visual Studio 2010\Projects\DashBoard\Modelo\obj\Release\Modelo.pdb

@@ -1,0 +1,10 @@
+C:\Users\Lucas\documents\visual studio 2010\Projects\DashBoard\DashBoard\bin\DashBoard.dll
+C:\Users\Lucas\documents\visual studio 2010\Projects\DashBoard\DashBoard\bin\DashBoard.pdb
+C:\Users\Lucas\documents\visual studio 2010\Projects\DashBoard\DashBoard\bin\EntityFramework.dll
+C:\Users\Lucas\documents\visual studio 2010\Projects\DashBoard\DashBoard\bin\EntityFramework.xml
+C:\Users\Lucas\documents\visual studio 2010\Projects\DashBoard\DashBoard\obj\Debug\DashBoard.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\documents\visual studio 2010\Projects\DashBoard\DashBoard\obj\Debug\DashBoard.dll
+C:\Users\Lucas\documents\visual studio 2010\Projects\DashBoard\DashBoard\obj\Debug\DashBoard.pdb
+C:\Users\Lucas\documents\visual studio 2010\Projects\DashBoard\DashBoard\bin\Newtonsoft.Json.dll
+C:\Users\Lucas\documents\visual studio 2010\Projects\DashBoard\DashBoard\bin\Newtonsoft.Json.xml
+C:\Users\Lucas\documents\visual studio 2010\Projects\DashBoard\DashBoard\bin\ExcelFolder\PERFORMANCE DASHBOARD Rev3.xlsx

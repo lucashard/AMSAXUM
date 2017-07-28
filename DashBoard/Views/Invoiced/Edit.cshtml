@@ -1,0 +1,345 @@
+﻿@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model DashBoard.ViewModel.InvoiceViewModel
+<h2>Edit Record</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.min.js")" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#InvoicedJun").focusout(function () {
+            $("#ClaimJun").val('');
+        });
+
+        $("#ClaimJun").focusout(function () {
+            $("#InvoicedJun").val('');
+        });
+
+        $("#InvoicedMay").focusout(function () {
+            $("#ClaimMay").val('');
+        });
+
+        $("#ClaimMay").focusout(function () {
+            $("#InvoicedMay").val('');
+        });
+
+        $("#InvoicedApr").focusout(function () {
+            $("#ClaimApr").val('');
+        });
+
+        $("#ClaimApr").focusout(function () {
+            $("#InvoicedApr").val('');
+        });
+
+        $("#InvoicedMar").focusout(function () {
+            $("#ClaimMar").val('');
+        });
+
+        $("#ClaimMar").focusout(function () {
+            $("#InvoicedMar").val('');
+        });
+
+        $("#ClaimFeb").focusout(function () {
+            $("#InvoicedFeb").val('');
+        });
+
+        $("#InvoicedFeb").focusout(function () {
+            $("#ClaimFeb").val('');
+        });
+
+        $("#ClaimJan").focusout(function () {
+            $("#InvoicedJan").val('');
+        });
+
+        $("#InvoicedJan").focusout(function () {
+            $("#ClaimJan").val('');
+        });
+
+        $("#ClaimDec").focusout(function () {
+            $("#InvoicedDec").val('');
+        });
+
+        $("#InvoicedDec").focusout(function () {
+            $("#ClaimDec").val('');
+        });
+
+
+        $("#ClaimNov").focusout(function () {
+            $("#InvoicedNov").val('');
+        });
+
+        $("#InvoicedNov").focusout(function () {
+            $("#ClaimNov").val('');
+        });
+
+        $("#ClaimOct").focusout(function () {
+            $("#InvoicedOct").val('');
+        });
+
+        $("#InvoicedOct").focusout(function () {
+            $("#ClaimOct").val('');
+        });
+
+        $("#ClaimSep").focusout(function () {
+            $("#InvoicedSep").val('');
+        });
+
+        $("#InvoicedSep").focusout(function () {
+            $("#ClaimSep").val('');
+        });
+
+        $("#ClaimJul").focusout(function () {
+            $("#InvoicedJul").val('');
+        });
+
+        $("#InvoicedJul").focusout(function () {
+            $("#ClaimJul").val('');
+        });
+    });
+</script>
+@using (Html.BeginForm("Edit", "Invoiced", FormMethod.Post))
+{
+      @Html.ValidationSummary(true)
+         <div style="margin-left: 126px;">
+             <div class="form-group row">
+                 <div class="col-xs-4">
+                     @Html.LabelFor(m => m.SentToAccount)
+                     @Html.TextBoxFor(m => m.SentToAccount, new { @class = "form-control" })
+
+                 </div>
+                 <div class="col-xs-4">
+                     @Html.LabelFor(m => m.Company)
+                     @Html.TextBoxFor(m => m.Company, new { @class = "form-control" })
+                 </div>
+                 <div class="col-xs-4">
+                     @Html.LabelFor(m => m.YearFiled)
+                     @Html.TextBoxFor(m => m.YearFiled, new { @class = "form-control" })
+                 </div>
+             </div>
+             <div class="form-group row">
+                 <div class="col-xs-3 col-xs-offset-1 ">
+                     @Html.LabelFor(m => m.ClaimJul)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.ClaimJul, new { @class = "form-control", @id = "ClaimJul", @placeholder = "Amount" })
+                     </div>
+
+                 </div>
+                 <div class="col-xs-3 col-xs-offset-2">
+
+                     @Html.LabelFor(m => m.InvoicedJul)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.InvoicedJul, new { @class = "form-control", @id = "InvoicedJul", @placeholder = "Amount" })
+                     </div>
+                 </div>
+             </div>
+             <div class="form-group row">
+                 <div class="col-xs-3 col-xs-offset-1 ">
+                     @Html.LabelFor(m => m.ClaimAug)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.ClaimAug, new { @class = "form-control", @id = "ClaimAug", @placeholder = "Amount" })
+                     </div>
+
+                 </div>
+                 <div class="col-xs-3 col-xs-offset-2">
+
+                     @Html.LabelFor(m => m.InvoicedAug)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.InvoicedAug, new { @class = "form-control", @id = "InvoicedAug", @placeholder = "Amount" })
+                     </div>
+                 </div>
+             </div>
+             <div class="form-group row">
+                 <div class="col-xs-3 col-xs-offset-1 ">
+                     @Html.LabelFor(m => m.ClaimSep)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.ClaimSep, new { @class = "form-control", @id = "ClaimSep", @placeholder = "Amount" })
+                     </div>
+
+                 </div>
+                 <div class="col-xs-3 col-xs-offset-2">
+
+                     @Html.LabelFor(m => m.InvoicedSep)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.InvoicedSep, new { @class = "form-control", @id = "InvoicedSep", @placeholder = "Amount" })
+                     </div>
+                 </div>
+             </div>
+
+             <div class="form-group row">
+                 <div class="col-xs-3 col-xs-offset-1 ">
+                     @Html.LabelFor(m => m.ClaimOct)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.ClaimOct, new { @class = "form-control", @id = "ClaimOct", @placeholder = "Amount" })
+                     </div>
+
+                 </div>
+                 <div class="col-xs-3 col-xs-offset-2">
+
+                     @Html.LabelFor(m => m.InvoicedOct)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.InvoicedOct, new { @class = "form-control", @id = "InvoicedOct", @placeholder = "Amount" })
+                     </div>
+                 </div>
+             </div>
+              <div class="form-group row">
+                 <div class="col-xs-3 col-xs-offset-1 ">
+                     @Html.LabelFor(m => m.ClaimNov)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.ClaimNov, new { @class = "form-control", @id = "ClaimNov", @placeholder = "Amount" })
+                     </div>
+                     
+                 </div>
+                 <div class="col-xs-3 col-xs-offset-2">
+                     
+                     @Html.LabelFor(m => m.InvoicedNov)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.InvoicedNov, new { @class = "form-control", @id = "InvoicedNov", @placeholder = "Amount" })
+                     </div>
+                 </div>
+             </div>
+
+             <div class="form-group row">
+                 <div class="col-xs-3 col-xs-offset-1 ">
+                     @Html.LabelFor(m => m.ClaimDec)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.ClaimDec, new { @class = "form-control", @id = "ClaimDec", @placeholder = "Amount" })
+                     </div>
+
+                 </div>
+                 <div class="col-xs-3 col-xs-offset-2">
+
+                     @Html.LabelFor(m => m.InvoicedDec)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.InvoicedDec, new { @class = "form-control", @id = "InvoicedDec", @placeholder = "Amount" })
+                     </div>
+                 </div>
+             </div>
+             <div class="form-group row">
+                 <div class="col-xs-3 col-xs-offset-1 ">
+                     @Html.LabelFor(m => m.ClaimJan)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.ClaimJan, new { @class = "form-control", @id = "ClaimJan", @placeholder = "Amount" })
+                     </div>
+
+                 </div>
+                 <div class="col-xs-3 col-xs-offset-2">
+
+                     @Html.LabelFor(m => m.InvoicedJan)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.InvoicedJan, new { @class = "form-control", @id = "InvoicedJan", @placeholder = "Amount" })
+                     </div>
+                 </div>
+             </div>
+             <div class="form-group row">
+                 <div class="col-xs-3 col-xs-offset-1 ">
+                     @Html.LabelFor(m => m.ClaimFeb)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.ClaimFeb, new { @class = "form-control", @id = "ClaimFeb", @placeholder = "Amount" })
+                     </div>
+
+                 </div>
+                 <div class="col-xs-3 col-xs-offset-2">
+
+                     @Html.LabelFor(m => m.InvoicedFeb)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.InvoicedFeb, new { @class = "form-control", @id = "InvoicedFeb", @placeholder = "Amount" })
+                     </div>
+                 </div>
+             </div>
+             <div class="form-group row">
+                 <div class="col-xs-3 col-xs-offset-1 ">
+                     @Html.LabelFor(m => m.ClaimMar)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.ClaimMar, new { @class = "form-control", @id = "ClaimMar", @placeholder = "Amount" })
+                     </div>
+
+                 </div>
+                 <div class="col-xs-3 col-xs-offset-2">
+
+                     @Html.LabelFor(m => m.InvoicedMar)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.InvoicedMar, new { @class = "form-control", @id = "InvoicedMar", @placeholder = "Amount" })
+                     </div>
+                 </div>
+             </div>
+             <div class="form-group row">
+                 <div class="col-xs-3 col-xs-offset-1 ">
+                     @Html.LabelFor(m => m.ClaimApr)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.ClaimApr, new { @class = "form-control", @id = "ClaimApr", @placeholder = "Amount" })
+                     </div>
+
+                 </div>
+                 <div class="col-xs-3 col-xs-offset-2">
+
+                     @Html.LabelFor(m => m.InvoicedApr)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.InvoicedApr, new { @class = "form-control", @id = "InvoicedApr", @placeholder = "Amount" })
+                     </div>
+                 </div>
+             </div>
+         <div class="form-group row">
+             <div class="col-xs-3 col-xs-offset-1 ">
+                 @Html.LabelFor(m => m.ClaimMay)
+                 <div class="input-group">
+                     <div class="input-group-addon">$</div>
+                     @Html.TextBoxFor(m => m.ClaimMay, new { @class = "form-control", @id = "ClaimMay", @placeholder = "Amount" })
+                 </div>
+
+             </div>
+             <div class="col-xs-3 col-xs-offset-2">
+
+                 @Html.LabelFor(m => m.InvoicedMay)
+                 <div class="input-group">
+                     <div class="input-group-addon">$</div>
+                     @Html.TextBoxFor(m => m.InvoicedMay, new { @class = "form-control", @id = "InvoicedMay", @placeholder = "Amount" })
+                 </div>
+             </div>
+         </div>
+
+ <div class="form-group row">
+                 <div class="col-xs-3 col-xs-offset-1 ">
+                     @Html.LabelFor(m => m.ClaimJun)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.ClaimJun, new { @class = "form-control", @id = "ClaimJun", @placeholder = "Amount" })
+                     </div>
+                     
+                 </div>
+                 <div class="col-xs-3 col-xs-offset-2">
+                     
+                     @Html.LabelFor(m => m.InvoicedJun)
+                     <div class="input-group">
+                         <div class="input-group-addon">$</div>
+                         @Html.TextBoxFor(m => m.InvoicedJun, new { @class = "form-control", @id = "InvoicedJun", @placeholder = "Amount" })
+                     </div>
+                 </div>
+             </div>
+         </div>
+    
+        <input type="submit" id="Submit" value="Save" class="btn btn-info center-block"/>
+    
+}

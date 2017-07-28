@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Download File</h2>
+
+<link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css"/>
+
+<span class="pull-left">@Html.ActionLink("Download", "File", "Download File", new { @class = "btn btn-primary" })
+    </span>

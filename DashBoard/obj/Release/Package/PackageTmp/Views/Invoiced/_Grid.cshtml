@@ -1,0 +1,71 @@
+﻿@using System.Web.UI.WebControls
+@model DashBoard.ViewModel.InvoiceVm
+@{
+    var grid = new WebGrid(Model.InvoiceViewModel, canPage: true, rowsPerPage: 10);
+}
+@using (Html.BeginForm("ViewGrid", "Invoiced", FormMethod.Get))
+{
+    <h1>Search ...</h1>
+    <div class="form-horizontal">
+         
+        <div class="col-lg-2">
+            @Html.TextBoxFor(m => m.SentToAccount, new { @class = "form-control", @placeholder = "Sent To Account" })
+        </div>
+        
+            <button type="submit" class="btn btn-success">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        
+    </div>
+    @grid.GetHtml(tableStyle: "webgrid-table",
+        headerStyle: "webgrid-header",
+        rowStyle: "webgrid-row-style",
+        alternatingRowStyle: "webgrid-alternating-row",
+        selectedRowStyle: "webgrid-selected-row",
+        footerStyle: "webgrid-footer", columns: new[]
+        {
+
+            grid.Column("", format: @<text>
+                                        @Html.ActionLink("Edit Record", "Edit", "Invoiced", new {item.Id}, new {@class = "btn btn-info"})
+                                     </text>, style: "col3Width", canSort: false),
+            grid.Column("", format: @<text>
+                                        @Html.ActionLink("Delete Record", "Delete", "Invoiced", new {item.Id}, new {@class = "btn btn-info", onclick = "return confirm('Are you sure?');"})
+                                     </text>, style: "col3Width", canSort: false),
+            grid.Column("SentToAccount", "Sent To Account"),
+            grid.Column("Company"),
+            grid.Column("YearFiled", "Year Filed"),
+            grid.Column("ClaimJul", "Claim Jul"),
+            grid.Column("InvoicedJul", "Invoiced Jul"),
+            grid.Column("ClaimAug", "Claim Aug"),
+            grid.Column("InvoicedAug", "Invoiced Aug"),
+            grid.Column("ClaimSep", "Claim Sep"),
+            grid.Column("InvoicedSep", "Invoiced Sep"),
+            grid.Column("ClaimOct", "Claim Oct"),
+            grid.Column("InvoicedOct", "Invoiced Oct"),
+            grid.Column("ClaimNov", "Claim Nov"),
+            grid.Column("InvoicedNov", "Invoiced Nov"),
+            grid.Column("ClaimDec", "Claim Dec"),
+            grid.Column("InvoicedDec", "Invoiced Dec"),
+            grid.Column("ClaimJan", "Claim Jan"),
+            grid.Column("InvoicedJan", "Invoiced Jan"),
+            grid.Column("ClaimFeb", "Claim Feb"),
+            grid.Column("InvoicedFeb", "Invoiced Feb"),
+            grid.Column("ClaimMar", "Claim Mar"),
+            grid.Column("InvoicedMar", "Invoiced Mar"),
+            grid.Column("ClaimApr", "Claim Apr"),
+            grid.Column("InvoicedApr", "Invoiced Apr"),
+            grid.Column("ClaimMay", "Claim May"),
+            grid.Column("InvoicedMay", "Invoiced May"),
+            grid.Column("ClaimJun", "Claim Jun"),
+            grid.Column("InvoicedJun", "Invoiced Jun")
+
+        })
+
+    <span class="pull-left">@Html.ActionLink("Create New Record", "Create", "Invoiced", new {@class = "btn btn-primary"})
+    </span>
+    <span >
+@Html.ActionLink("Go Back", "Index", "Invoiced", new {@class = "btn btn-primary pull-right"})
+</span>
+
+    <div style="height: 50px;"></div>
+}

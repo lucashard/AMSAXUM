@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />    
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-3.1.1.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.min.js")" type="text/javascript"></script>
+    
+<script type="text/javascript">
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+</script>
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+           @* <div id="title">
+                <h1>DashBoard</h1>
+            </div>*@
+        @*    <div id="logindisplay">
+                @Html.Partial("_LogOnPartial")
+            </div>*@
+            @*<div id="menucontainer">
+                <ul id="menu">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Invoiced", "Index", "Invoiced")</li>
+                    <li>@Html.ActionLink("Pending Noa", "Index", "PendingNOA")</li>
+                    <li>@Html.ActionLink("Contract Renewals", "Index", "PendingRenewals")</li>
+                    <li>@Html.ActionLink("Forecast", "Index", "Forecast")</li>
+                </ul>
+            </div>*@
+              <div id="menucontainer">
+                <ul class="topnav" id="myTopnav">
+                    <li>@Html.ActionLink("Home", "Index","Home")</li>
+                    <li>@Html.ActionLink("Invoiced", "Index", "Invoiced")</li>
+                    <li>@Html.ActionLink("Pending Noa", "Index", "PendingNOA")</li>
+                    <li>@Html.ActionLink("Contract Renewals", "Index", "PendingRenewals")</li>
+                    <li>@Html.ActionLink("Forecast", "Index", "Forecast")</li>
+                      <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+  </li>
+                </ul>
+                </div>
+        </div>
+        <div id="main">
+          
+            @RenderBody()
+        </div>
+        <div id="footer">
+        </div>
+    </div>
+</body>
+</html>
