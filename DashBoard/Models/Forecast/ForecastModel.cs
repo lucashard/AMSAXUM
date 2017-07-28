@@ -7,7 +7,7 @@ using System.Web;
 namespace DashBoard.Models.Forecast
 {
     public class ForecastModel
-    {
+    { 
         public decimal Forecast { get; set; }
         public decimal TotalClient { get; set; }
         public decimal Client { get; set; }
